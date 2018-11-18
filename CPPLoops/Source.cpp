@@ -14,12 +14,12 @@ int main()
 		while (BTC <= 6000) // this is the ending point of your look
 		{
 			cout << "BTC is " << BTC << endl;
-
+			
 			// if you want it to stop the infinite loop at some point, you change the value of the variable so the loop can hit that spot and stop the script
 			BTC++; // this is te increment of 1 everytime
 	}
 
-
+		cout << "END OF THIS PROGRAM \n" << endl;
 
 ///////////////////
 // This is a built calculator with a while loop
@@ -42,9 +42,40 @@ int main()
 		}
 
 		cout << "Your total number is " << total << endl; // <<< if this line was in line 38 it would show the total every time you enter a number until the loop stops
+		cout << "END OF THIS PROGRAM \n" << endl;
+	
+
+//////////////////////////
+//This one calculates the avarage of all numbers
+
+		//This is going to calculate the avarege USD price of all entered CryptoCurrencies
+		double CryptoPrice;
+		double TotalAmount = 0;
+		double Entries = 0;
+
+
+		cout << "First Crypto Price: " << endl;
+		cin >> CryptoPrice;
+
+		while (CryptoPrice != -1) //<<< If Crypto Prices is not equals to -1 then keep running it again and again
+		{
+			
+			TotalAmount += CryptoPrice; 
+			Entries++; 
+
+			cout << "A new Crypto USD Price: ";
+			cin >> CryptoPrice;
+
+		}
+
+		cout << "Your total crpyto amount is:  " << TotalAmount << endl;
+		cout << "Your avarage number is: " << TotalAmount / Entries << endl;
+		cout << "Your total number of entries are: " << Entries << endl;
+
+
+
+
 
 		cin.get();
 		return 0;
 }
-
-
