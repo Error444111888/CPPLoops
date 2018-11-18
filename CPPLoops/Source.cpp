@@ -102,7 +102,7 @@ int main()
 	//Accumulative interest calculations in for loop
 
 	double TotalUSD = 0.0;
-	double InitialUSD;
+	double InitialUSD; // <<< No value on these because the user will put the value in
 	double InterestRatePercentage;
 
 	cout << "How much you have? \n" << endl;
