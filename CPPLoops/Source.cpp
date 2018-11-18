@@ -1,11 +1,15 @@
+
 // Loops
 
 #include <iostream>
+#include <cmath>
 
 using namespace std;
 
+
 int main()
 {
+
 	//While loops. You put the condition in () just like if statements
 	
 	
@@ -63,7 +67,7 @@ int main()
 			TotalAmount += CryptoPrice; 
 			Entries++; 
 
-			cout << "A new Crypto USD Price: ";
+			cout << "A new Crypto USD Price or -1 for stop: ";
 			cin >> CryptoPrice;
 
 		}
@@ -71,11 +75,69 @@ int main()
 		cout << "Your total crpyto amount is:  " << TotalAmount << endl;
 		cout << "Your avarage number is: " << TotalAmount / Entries << endl;
 		cout << "Your total number of entries are: " << Entries << endl;
+		cout << "END OF THIS PROGRAM \n" << endl;
 
 
 
 
 
-		cin.get();
-		return 0;
+
+
+//////////////////////
+//For Loops
+
+	//when you're making a for loop, first thing is the value of the x and then condition to stop running like the kill command and then increment
+	for (int BTC = 5000; BTC <= 20000; BTC += 100)
+	{
+		cout << "BTC price right now is: " << BTC << endl;
+	}
+
+	cout << "END OF THIS PROGRAM \n" << endl;
+
+
+
+	
+	
+///////////////////////////////////////////
+	//Accumulative interest calculations in for loop
+
+	double TotalUSD = 0.0;
+	double InitialUSD;
+	double InterestRatePercentage;
+
+	cout << "How much you have? \n" << endl;
+	cin >> InitialUSD;
+
+	cout << "What's the interest rate in decimals? \n" << endl;
+	cin >> InterestRatePercentage;
+
+
+	for (int Months = 1; Months <= 6; Months++)
+	{
+		TotalUSD = InitialUSD * pow(1 + InterestRatePercentage, Months);
+		cout << Months << " ------- " << TotalUSD << endl;
+	}
+
+	cout << "END OF THIS PROGRAM \n" << endl;
+		
+
+
+//////////////////////////////////////////
+	//do while Loops. It's used for the cases where you want to run a piece of code first before testing it in while
+	
+double BTCPrice = 5463.485;
+
+do {
+	cout << BTCPrice << endl;
+	BTCPrice++;
+} while (BTCPrice <= 6000.485); //<<< Test of the condition is at the end of the conditon
+
+cout << "END OF THIS PROGRAM \n" << endl;
+
+
+
+//////////////////////////////////////////
+//
+
+	cin.get();
 }
